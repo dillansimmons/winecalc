@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { volumeConv } from '../helpers/calcs.js'
 //import { Link } from 'react-router-dom'
 
 class VolumeConversions extends Component {
 
   state = {
+    // volume: 0,
+    // pints: 0
   }
 
   // on searching for books set the state of search
@@ -11,56 +14,16 @@ class VolumeConversions extends Component {
     this.setState({
         volume: volume
     })
+    // console.log(id);
+    // if (id === "pints"){
+    //   this.setState({
+    //     pints: volume
+    //   })
+    // }
     // if a volume term exists then run function
     if (volume){
-      
-      var arrs = {
-          milliliters:  0.001,
-          liters:   1.0,
-          hectoliters:  100.0,
-          cubicmeters:  1000.0,
-          fluidounces:  0.0295735296,
-          cups:    0.2365882,
-          pints:    0.473176473,
-          quarts:   0.946352946,
-          tablespoons:  0.0147867648,
-          teaspoons:   0.00492892159,
-          cubicinches:  0.016387064,
-          gallons:   3.78541178,
-          bottles: 0.750,
-          cases: 6.75,
-          barrels: 225.0
-          // Ounces
-      };
-
-      var hints = {
-        a: "750 ml is the common bottle size for most wine.",
-        b: "1.5 L is a magnum bottle size, it's quivalent to two standard bottles."
-      }
-      for (var i in arrs) {
-          var offset = arrs[i];
-          console.log(id);
-          var offsetVal = volume * arrs[id];
-          var result = (offsetVal / offset).toFixed(3);
-          if (document.getElementById('' + i).value === volume) {
-              document.getElementById('' + i).value = (volume);
-          } else {
-              document.getElementById('' + i).value = (result);
-          }
-      }
-      if (document.getElementById('milliliters').value === 750){
-        document.getElementById('notes').innerHTML = hints.a;
-        document.getElementById('notes').classList = "visibleHint";
-      } else if (document.getElementById('liters').value === 1.5){
-        document.getElementById('notes').innerHTML = hints.b;
-        document.getElementById('notes').classList = "visibleHint";
-      } else {
-        document.getElementById('notes').classList = "hints";
-      }
-      // Fallback error if API call fails         
-     } else {
-      //volume = 0;
-    }      
+      volumeConv(volume, id);       
+     }
   }
 
   render() {

@@ -5,12 +5,19 @@ import VolumeConversions from './components/volumeConversions'
 import Brix from './components/brix'
 import SO2 from './components/so2'
 import './App.css'
+import { offline } from './helpers/calcs.js'
 import { Link } from 'react-router-dom'
+
 
 class App extends Component {
   state = {
     arrs : []
   }
+
+  componentDidMount() {
+  offline();
+  }
+  
   render() {
     return (
       <div className='app'>
@@ -46,6 +53,7 @@ class App extends Component {
         <Route path='/SO2' render={({ history }) => (
           <SO2 />
         )}/>
+        <div id="offline">Offline</div>
     </div>
     )
   }

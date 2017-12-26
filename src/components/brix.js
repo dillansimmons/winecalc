@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { brix } from '../helpers/calcs.js'
 //import { Link } from 'react-router-dom'
 
 class Brix extends Component {
@@ -13,19 +14,8 @@ class Brix extends Component {
     })
     // if a volume term exists then run function
     if (volume){
-        //alert(2);
-       var r1 = document.getElementById('brix').value,
-       r2 = document.getElementById('alcCon').value,
-       r4 = 261.3 / (261.3 - r1),
-       r5 = r1 * r4 * 10,
-       r = r1 * r2;
-       document.getElementById('futureAlc').value = (r).toFixed(2);
-       document.getElementById('grav').value = (r4).toFixed(4);
-       document.getElementById('sugar').value = (r5).toFixed(2);
-      // Fallback error if API call fails         
-     } else {
-      //volume = 0;
-    }      
+      brix();
+    }
   }
 
   render() {

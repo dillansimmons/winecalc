@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { so2 } from '../helpers/calcs.js'
 //import { Link } from 'react-router-dom'
 
 class SO2 extends Component {
@@ -12,22 +13,7 @@ class SO2 extends Component {
     })
     // if a volume term exists then run function
     if (volume) {
-      var volumea = document.getElementById('so2liquidd_1').value;
-      var rate = document.getElementById('so2liquidd_2').value;
-      var concentration = document.getElementById('so2liquidd_3').value;
-
-      var volumec = document.getElementById('so2liquidd_c1').value;
-      var ratec = document.getElementById('so2liquidd_c2').value;
-      var sumc = document.getElementById('so2liquidd_c3').value;
-
-      var r = (((volumea * volumec) / ratec) * ((rate / concentration) * 100)) / sumc;
-
-      document.getElementById('so2liquidd_4').value = (r ? r.toFixed(2) : 0);
-    
-      // var a = $("#so2liquidd_1, #so2liquidd_2, #so2liquidd_3");
-    
-    } else {
-      //volume = 0;
+      so2();    
     }
   }
 

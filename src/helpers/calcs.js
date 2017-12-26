@@ -64,6 +64,29 @@ export function hints(){
   }
 }
 
+// Brix calculation
+export function brix(){
+  var r1 = document.getElementById('brix').value,
+  r2 = document.getElementById('alcCon').value,
+  r4 = 261.3 / (261.3 - r1),
+  r5 = r1 * r4 * 10,
+  r = r1 * r2;
+  document.getElementById('futureAlc').value = (r).toFixed(2);
+  document.getElementById('grav').value = (r4).toFixed(4);
+  document.getElementById('sugar').value = (r5).toFixed(2);
+}  
+
+export function so2(){
+  var volumea = document.getElementById('so2liquidd_1').value,
+  rate = document.getElementById('so2liquidd_2').value,
+  concentration = document.getElementById('so2liquidd_3').value,
+  volumec = document.getElementById('so2liquidd_c1').value,
+  ratec = document.getElementById('so2liquidd_c2').value,
+  sumc = document.getElementById('so2liquidd_c3').value,
+  r = (((volumea * volumec) / ratec) * ((rate / concentration) * 100)) / sumc;
+  document.getElementById('so2liquidd_4').value = (r ? r.toFixed(2) : 0);
+}
+
 // // Basic Liquid volume conversions
 // var VolumeConversions = function () {
 //     var current = "";

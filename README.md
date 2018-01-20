@@ -1,12 +1,17 @@
-#BREW-n-WINE CALC :beers: / :grapes:
+# BREW-n-WINE CALC :beers: / :grapes:
 
 Application for calculating common conversions and equations for brewing beer and making wine. 
+
+Currently includes:
+- volume conversions
+- brix to alchohal 
+- so2 additions
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Folder Structure
 
-After creation, your project should look like this:
+Project should look like this:
 
 ```
 my-app/

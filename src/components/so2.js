@@ -31,10 +31,10 @@ class SO2 extends Component {
                 <input type="number" step="any" id="so2liquidd_1" className="inp form-control"
               onChange={(event) => this.updateVolume(event.target.value, event.target.id)} />
                 <select id="so2liquidd_c1" className="inp form-control">
-                    <option value="3.7854">Gallons</option>
-                    <option value="1">liters</option>
-                    <option value="100">hL</option>
-                    <option value="4.546">UK Gallons</option>
+                    <option value="3.7854">Gallons ▾</option>
+                    <option value="1">liters ▾</option>
+                    <option value="100">hL ▾</option>
+                    <option value="4.546">UK Gallons ▾</option>
                 </select>
                 </div>
             </div>
@@ -45,11 +45,11 @@ class SO2 extends Component {
                 <input type="number" step="any" id="so2liquidd_2" className="inp form-control"
               onChange={(event) => this.updateVolume(event.target.value, event.target.id)} />
                 <select id="so2liquidd_c2" className="inp form-control">
-                    <option value="1000">ppm</option>
-                    <option value="1000">mg/L</option>
-                    <option value="1">g/L</option>
-                    <option value="100">g/hL</option>
-                    <option value="0.1">g/100ml</option>
+                    <option value="1000">ppm ▾</option>
+                    <option value="1000">mg/L ▾</option>
+                    <option value="1">g/L ▾</option>
+                    <option value="100">g/hL ▾</option>
+                    <option value="0.1">g/100ml ▾</option>
                 </select>
                 </div>
             </div>
@@ -67,16 +67,16 @@ class SO2 extends Component {
         <div id="amount" className="results-field">
           <h3>Volume of Liquid SO<sub>2</sub> solution to add</h3>
           {/*<div id="amount-holder"></div>*/}
-                <div className="w-select">
+            <div className="w-select">
                 <input type="number" step="any" id="so2liquidd_4" className="inp form-control wb-calc-output"
               onChange={(event) => this.updateVolume(event.target.value, event.target.id)} />
                 <select id="so2liquidd_c3" className="inp form-control">
-                    <option value="1">mL</option>
-                    <option value="1000">liters</option>
-                    <option value="3785.40">Gallons</option>
-                    <option value="4546">UK Gallons</option>
+                    <option value="1">mL ▾</option>
+                    <option value="1000">liters ▾</option>
+                    <option value="3785.40">Gallons ▾</option>
+                    <option value="4546">UK Gallons ▾</option>
                 </select>
-                </div>
+            </div>
         </div>
 
       <div className="hints" id="notes">Alcohol conversion factor can be between 0.55 - 0.65</div>
